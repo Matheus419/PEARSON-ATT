@@ -1,21 +1,19 @@
-// // DOM
-// // Navegar no documento html
+// selecionando elementos do menu Mobile
 
-// const brand = document.querySelector("#brand");
+const menuBtn = document.querySelector("#menu")
+const closeMenuBtn = document.querySelector("#close-menu")
+const menu = document.querySelector("#mobile-navbar")
 
-// brand.addEventListener('click', function(event,){
-//     // console.log("testando click");
-//     // console.log(event.target)
-//     event.target.style.color = "blue"
-// })
+
+console.log()
 
 // selecionar os elementos dos slides
 const slides = document.querySelectorAll(".banner");
 // console.log(slides)
-//
+
 const dots = document.querySelectorAll(".dot")
 
-let slideIndex = 0;
+let slideIndex = 1;
 
 function showSlides(){
     for(let i=0; i < slides.length; i++){
@@ -35,6 +33,21 @@ function showSlides(){
 
 
 }
+
+//Ativar Menu-Mobile
+// Arrow function
+// () => {
+//    }
+// function  () {
+// }
+menuBtn.addEventListener("click", (e) => {
+    menu.classList.add("menu-active")
+})
+
+closeMenuBtn.addEventListener("click", (e) => {
+    menu.classList.remove("menu-active")
+})
+
 
 //Inicialização
 showSlides()
